@@ -23,8 +23,7 @@ api.createOrder(cart, function () {
    });
    // 💡 So over here, we are creating a order and then we are blindly trusting `createOrder`
   // to call `proceedToPayment`.
-   // 💡 It is risky, as `proceedToPayment` is important part of code and we are blindly
-   trusting `createOrder` to call it and handle it.
+   // 💡 It is risky, as `proceedToPayment` is important part of code and we are blindlytrusting `createOrder` to call it and handle it.
    // 💡 When we pass a function as a callback, basically we are dependant on our parent
   // function that it is his responsibility to run that function. This is called `inversion of
   // control` because we are dependant on that function. What if parent function stopped

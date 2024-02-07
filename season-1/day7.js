@@ -10,10 +10,10 @@ var a = 100;
 console.log(a)
 
 /////////////
-{
-    var a = 10;
-    let b = 20;
-    const c = 30;
-   }
-   console.log(a); // 10
-   console.log(b); // Uncaught ReferenceError: b is not defined
+// {
+//     var a = 10;
+//     let b = 20;
+//     const c = 30;
+//    }
+//    console.log(a); // 10
+//    console.log(b); // Uncaught ReferenceError: b is not defined
