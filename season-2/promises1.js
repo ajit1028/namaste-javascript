@@ -71,4 +71,24 @@ format and there is a way to extract data.
 
 
 // A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+// const cart = ["shoes", "pants", "kurta"];
 
+// createrOrder(cart,function(orderId){
+//     proceedToPayment(orderId,function(paymentInfo){
+//         showOrderSummary(paymentInfo,function(){
+//             updateWalletBalance();
+//         })
+//     })
+// })
+
+
+// createOrder(cart)
+//  .then(function(orderId){
+//     return proceedToPayment(orderId);
+//  })
+//  .then(function(paymentInfo){
+//     return showOrderSummary(paymentInfo);
+//  })
+//  .then(function(balance){
+//     return updateWalletBalance(balance)
+//  });

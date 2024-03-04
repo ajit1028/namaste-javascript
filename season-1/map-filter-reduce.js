@@ -1,14 +1,14 @@
 //map function
 // It is basically used to transform a array. The map() method creates a new array with the results of calling a
 // function for every array element.
-//const arr = [5,1,3,2,6];
+// const arr = [5,1,3,2,6];
 
 // function double(x){
 //     return 2 * x;
 // }
 // const doubleArr = arr.map(double);
 
- // const dobuleArr = arr.map((x)=>2*x);
+//  const dobuleArr = arr.map((x)=>2*x);
 // console.log(dobuleArr);
 // console.log(arr);
 
@@ -18,14 +18,14 @@
 //new array from a given array consisting of only those elements from the given array which satisfy a condition
 //set by the argument method.
 
-// const array = [5, 1, 3, 2, 6];
+//const array = [5, 1, 3, 2, 6];
 
 // function isOdd(x) {
 //  return x % 2;
 // }
 // const oddArr = array.filter(isOdd); // [5,1,3]
 // console.log(oddArr);
-// Other way of writing the above:
+//Other way of writing the above:
 // const oddArr = array.filter((x) => x % 2);
 // console.log(oddArr);
 

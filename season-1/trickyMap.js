@@ -2,9 +2,9 @@
 //     {firstName:"Rakesh", lastName:"Tanwar", age:23},
 //     {firstName:"Sagar", lastName:"Rawal", age:22},
 //     {firstName:"Hanna", lastName:"Pateriya", age:23},
-//     {firstName:"Vipin", lastName:"TanwYadavar", age:24},
+//     {firstName:"Vipin", lastName:"Yadav", age:24},
 // ];
-//  Get array of full name : ["Alok Raj", "Ashish Kumar", ...]
+ //Get array of full name : ["Rakesh Tanwar", "Ashish Kumar", ...]
 // const fullNameArr = users.map((user)=>user.firstName+" "+user.lastName);
 // console.log(fullNameArr);
 
@@ -29,15 +29,15 @@ const users = [
    ];
 
    // function chaining
-//    const output = users
-//     .filter((user) => user.age < 30)
-//     .map((user) => user.firstName);
-//    console.log(output); // ["Alok", "Ashish", "Ankit"]
-   // Homework challenge: Implement the same logic using reduce
-   const output = users.reduce((acc, curr) => {
-    if (curr.age < 30) {
-    acc.push(curr.firstName);
-    }
-    return acc;
-   }, []);
+   const output = users
+    .filter((user) => user.age < 30)
+    .map((user) => user.firstName);
    console.log(output); // ["Alok", "Ashish", "Ankit"]
+   //Homework challenge: Implement the same logic using reduce
+   // const output = users.reduce((acc, curr) => {
+   //  if (curr.age < 30) {
+   //  acc.push(curr.firstName);
+   //  }
+   //  return acc;
+   // }, []);
+   // console.log(output); // ["Alok", "Ashish", "Ankit"]

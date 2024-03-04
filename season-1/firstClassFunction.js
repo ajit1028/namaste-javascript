@@ -53,7 +53,7 @@
 //    function xyz() {}
 //    b(xyz); // same thing as prev code
 
-var b = function (param1) {
+var b = function () {
     return function () {};
    };
    console.log(b()); //we log the entire fun within b
