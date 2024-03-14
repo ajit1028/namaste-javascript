@@ -80,7 +80,11 @@ format and there is a way to extract data.
 //         })
 //     })
 // })
+// And now above code is expanding horizontally and this is called pyramid of doom.
+// Callback hell is ugly and hard to maintain.
 
+// 💡 Promise fixes this issue too using `Promise Chaining`
+// Example Below is a Promise Chaining
 
 // createOrder(cart)
 //  .then(function(orderId){

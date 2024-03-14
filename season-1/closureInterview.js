@@ -1,14 +1,15 @@
-// function outer() {
-//     var a = 10;
-//     function inner() {
-//     console.log(a);
-//     } // inner forms a closure with outer
-//     return inner;
-//    }
+function outer() {
+   var a = 10;
+
+    function inner() {
+    console.log(a);
+    } // inner forms a closure with outer
+    return inner;
+   }
    //outer()(); // 10 // over here first `()` will return inner function and then using secong`()` to call inner function
    
-//    var z=outer(); 
-//    console.log(z);
+   var z=outer(); 
+   console.log(z());
 
 // function outer(str)
 // {
@@ -86,20 +87,20 @@
    // Above code is not good and scalable for say, when you plan to implement decrementcounter at a later stage.
 // To address this issue, we use *constructors*
 // Adding decrement counter and refactoring code:
- function Counter() {
- //constructor function. Good coding would be to capitalize first letter of constructorfunction.
- var count = 0;
- this.incrementCounter = function() { //anonymous function
- count++;
- console.log(count);
- }
- this.decrementCounter = function() {
- count--;
- console.log(count);
- }
-}
+ //function Counter() {
+//  //constructor function. Good coding would be to capitalize first letter of constructorfunction.
+//  var count = 0;
+//  this.incrementCounter = function() { //anonymous function
+//  count++;
+//  console.log(count);
+//  }
+//  this.decrementCounter = function() {
+//  count--;
+//  console.log(count);
+//  }
+// }
 
-var counter1 = new Counter(); // new keyword for constructor fun
-counter1.incrementCounter();
-counter1.incrementCounter();
-counter1.decrementCounter();
+// var counter1 = new Counter(); // new keyword for constructor fun
+// counter1.incrementCounter();
+// counter1.incrementCounter();
+// counter1.decrementCounter();

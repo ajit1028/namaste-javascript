@@ -219,10 +219,10 @@ async function handlePromise() {
       const res = await data.json();
       console.log(res);
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
   };
-  handlePromise()
+  handlePromise();
   
   // In above whenever any error will occur the execution will move to catch block. One could try above with bad url which will result in error.
   
