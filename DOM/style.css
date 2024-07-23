@@ -1,0 +1,22 @@
+/* #body{
+    background-color:rgb(101, 101, 16);
+    
+}
+
+#box{
+    height:200px;
+    width:100px;
+    background-color:red;
+} */
+
+
+/* event.html */
+#box{
+    margin-top: 10px;
+    background-color: rgb(60, 255, 0);
+    height:200px;
+    width:150px;
+    text-align: center;
+    border-radius: 20px;
+    border:2px white
+}

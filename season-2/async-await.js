@@ -7,12 +7,12 @@
 // Async await vs Promise.then/.catch
 
 //part-1
-// 💡 async function always returns a promise, even if I return a simple string from below function, async keyword will wrap it under Promise and then return.
+//async function always returns a promise, even if I return a simple string from below function, async keyword will wrap it under Promise and then return.
 // async function getData() {
 //     return "Namaste JavaScript";
 //   }
-//   const dataPromise = getData();
-//   console.log(dataPromise); // Promise {<fulfilled>: 'Namaste JavaScript'}
+//    const dataPromise = getData();
+//    console.log(dataPromise); // Promise {<fulfilled>: 'Namaste JavaScript'}
   
 //   //❓How to extract data from above promise? One way is using promise .then
 //   dataPromise.then(res => console.log(res)); // Namaste JavaScript
@@ -28,8 +28,10 @@
 //   }
 //   // In above case, since we are already returning a promise async function would simply return that instead of wrapping with a new Promise.
 //   const dataPromise = getData();
-//   //console.log(dataPromise); // Promise {<fulfilled>: 'Promise resolved value!!'}
+//   console.log(dataPromise); // Promise {<fulfilled>: 'Promise resolved value!!'}
+
 //   dataPromise.then(res => console.log(res)); // Promise resolved value!!
+
 
 //part-3
 // const p = new Promise((resolve, reject) => {
@@ -75,10 +77,10 @@
 //   }
   
 //   getData(); // Promise resolved value!!
-//   //output
-//   //Namaste Javascript
-    //after 10 sec below line print
-//   //Promise resolved value!!
+  //output
+  //Namaste Javascript
+  //   after 10 sec below line print
+  //Promise resolved value!!
 
 // const p = new Promise((resolve, reject) => {
 //         setTimeout(()=>{
@@ -88,12 +90,15 @@
 // async function handlePromise() {
 //     console.log("Hello World");
 //         const val = await p;
+//        // console.log(val);
+
 //         console.log("Namaste Javascript");
 //         console.log(val);
 //       }
 //       handlePromise(); // Promise resolved value!!
 
        //output
+       //Hello World
        // after 10 sec below lines will be print
 //   //Namaste Javascript
 //   //Promise resolved value!!
@@ -106,7 +111,7 @@
 //      },10000);
 //   });
 // async function handlePromise() {
-// console.log("Hello World");
+//     console.log("Hello World");
 //     const val1 = await p;
 //     console.log("Namaste Javascript");
 //     console.log(val1);
@@ -141,7 +146,7 @@
 //      },5000);
 //   });
 // async function handlePromise() {
-// console.log("Hello World");
+//     console.log("Hello World");
 //     const val1 = await p1;
 //     console.log("Namaste Javascript");
 //     console.log(val1);
@@ -154,44 +159,46 @@
 //   handlePromise();
 
   //output
+    //Hello World
     //after 10 sec both the promises will be printed
  /*
-  Hello World
+  
   Namaste Javascript
   Promise resolved value!!
-  Namaste Javascript
+  Namaste Javascript2
   Promise resolved value!!
  */
 
 
   //part-8
-//   const p1 = new Promise((resolve, reject) => {
-//         setTimeout(()=>{
-//             resolve('Promise resolved value!!');
-//          },5000);
-//       });
-//       const p2 = new Promise((resolve, reject) => {
-//         setTimeout(()=>{
-//             resolve('Promise resolved value!!');
-//          },10000);
-//       });
-//     async function handlePromise() {
-//     console.log("Hello World");
-//         const val1 = await p1;
-//         console.log("Namaste Javascript");
-//         console.log(val1);
+  // const p1 = new Promise((resolve, reject) => {
+  //       setTimeout(()=>{
+  //           resolve('Promise resolved value!!');
+  //        },5000);
+  //     });
+  //     const p2 = new Promise((resolve, reject) => {
+  //       setTimeout(()=>{
+  //           resolve('Promise resolved value!!');
+  //        },10000);
+  //     });
+  //   async function handlePromise() {
+  //       console.log("Hello World");
+  //       const val1 = await p1;
+  //       console.log("Namaste Javascript");
+  //       console.log(val1);
     
-//         const val2 = await p2;
-//         console.log("Namaste Javascript2");
-//         console.log(val2);
+  //       const val2 = await p2;
+  //       console.log("Namaste Javascript2");
+  //       console.log(val2);
       
-//       }
-//       handlePromise();
+  //     }
+  //     handlePromise();
 
   //output
+  //Hello World
     //after 10 sec both the promises will be printed
  /*
-  Hello World
+
   after 5 sec 
   Namaste Javascript
   Promise resolved value!!
@@ -204,25 +211,25 @@
 
 
   //part-9  (Real World example of async/await)
-//   async function handlePromise() {
-//     // fetch() => Response Object which as body as Readable stream => Response.json() is also a promise which when resolved => value
-//     const data = await fetch('https://api.github.com/users/ajit1028');
-//     const res = await data.json();
-//     console.log(res);
-//   };
-//   handlePromise()
+  // async function handlePromise() {
+  //   // fetch() => Response Object which as body as Readable stream => Response.json() is also a promise which when resolved => value
+  //   const data = await fetch('https://api.github.com/users/ajit1028');
+  //   const res = await data.json();
+  //   console.log(res);
+  // };
+  // handlePromise();
 
 //part-10 (error handling)
-async function handlePromise() {
-    try {
-      const data = await fetch('https://api.github.com/users/ajit1028');
-      const res = await data.json();
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  handlePromise();
+// async function handlePromise() {
+//     try {
+//       const data = await fetch('https://api.github.com/users/ajit1028');
+//       const res = await data.json();
+//       console.log(res);
+//     } catch (err) {
+//       console.log(err.message);
+//     }
+//   };
+//   handlePromise();
   
   // In above whenever any error will occur the execution will move to catch block. One could try above with bad url which will result in error.
   
